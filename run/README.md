@@ -15,11 +15,6 @@ gcloud run deploy hello --image gcr.io/bytesgcptemplate/hello:v1
 gcloud run services update --platform=managed --region=europe-west1 --update-env-vars NAME=Magnus
 ```
 
-
-#### Things to explore
-* [ ] Terraform or similar for setup 
-* [ ] Use secret manager for environment vars
-
 ### Deploy
 
 ```
@@ -30,3 +25,27 @@ docker push $TAG
 
 gcloud run deploy $NAME --image $TAG --platform=managed --region=europe-west1
 ```
+
+or shorted
+
+```
+NAME=$(basename "$PWD")
+TAG=gcr.io/bytesgcptemplate/$NAME
+gcloud builds submit --tag $TAG
+gcloud run deploy $NAME --image $TAG --platform=managed --region=europe-west1
+```
+
+### Set defaults
+
+```
+gcloud config set run/platform managed
+gcloud config set run/region europe-west1
+```
+
+
+#### Things to explore
+* [ ] Use secret manager for environment vars
+* [ ] Service to service authentication
+  *   https://cloud.google.com/run/docs/authenticating/service-to-service#gcloud
+* [ ] Setup continuous deployment
+* [ ] Setup staging enviroment
