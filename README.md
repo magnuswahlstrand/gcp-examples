@@ -5,3 +5,4 @@
 * [ ] Deployment 
   * Cloud Deployment Manager
   * Terraform
+* [ ] Tracing
