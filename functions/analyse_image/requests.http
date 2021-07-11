@@ -1,0 +1,9 @@
+POST https://us-central1-bytesgcptemplate.cloudfunctions.net/analyseImage
+Content-Type: application/json
+
+{
+  "bucket": "mbw-cats",
+  "name": "loan.jpg"
+}
+
+###

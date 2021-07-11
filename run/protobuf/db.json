@@ -1,0 +1,31 @@
+{
+  "messages": [
+    {
+      "subscription": "projects/someproject/subscriptions/my-subscription-id",
+      "message": {
+        "data": "d29kZW1heWE=",
+        "messageId": "1",
+        "attributes": {}
+      },
+      "id": 1
+    },
+    {
+      "subscription": "projects/someproject/subscriptions/my-subscription-id",
+      "message": {
+        "data": "d29kZW1heWE=",
+        "messageId": "2",
+        "attributes": {}
+      },
+      "id": 2
+    },
+    {
+      "subscription": "projects/someproject/subscriptions/my-subscription-id",
+      "message": {
+        "data": "d29kZW1heWE=",
+        "messageId": "3",
+        "attributes": {}
+      },
+      "id": 3
+    }
+  ]
+}
